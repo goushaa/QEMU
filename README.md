@@ -71,3 +71,5 @@ qemu-system-aarch64 \
    -device virtio-net-device,netdev=net0
 ```
 When prompted, enter the username and password that you set up during the installation process.
+
+## 7. SSH & VSCode
