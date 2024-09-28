@@ -19,7 +19,7 @@ qemu-img create -f qcow2 ubuntu-arm64.qcow2 20G
 Download the Ubuntu server ISO using the `wget` command:
 
 ```bash
-wget -O ubuntu-24.04.1-live-server-arm64.iso https://releases.ubuntu.com/24.04/ubuntu-24.04.1-live-server-arm64.iso
+wget -O ubuntu-24.04.1-live-server-arm64.iso https://cdimage.ubuntu.com/releases/24.04.1/release/ubuntu-24.04.1-live-server-arm64.iso
 ```
 
 ## 4. Boot the Ubuntu Server VM with QEMU (ARM Emulation)
