@@ -73,3 +73,10 @@ qemu-system-aarch64 \
 When prompted, enter the username and password that you set up during the installation process.
 
 ## 7. SSH & VSCode
+
+### Note
+In steps 4 & 6 enable kvm through adding the below option when qemu is installed on an arm processor not x86 in our case:
+
+```bash
+   -enable-kvm
+```
