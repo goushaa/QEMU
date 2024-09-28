@@ -55,7 +55,7 @@ The VM will now start. Follow these instructions:
 9. **Finish the Installation**: Complete the setup and when prompted, the system will ask for a reboot.
 
 ## 6. Boot from the Installed Disk
-**Instead of rebooting the system from the TUI, shut down the VM and restart it using the following command to boot from the disk image:**
+**Instead of rebooting the system from the TUI, shut down the VM** and restart it using the following command to boot from the disk image:
 
 ```bash
 qemu-system-aarch64 \
