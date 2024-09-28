@@ -78,6 +78,10 @@ Enable ssh on both
 sudo apt install ssh
 sudo systemctl enable ssh --now
 ```
+On VM boot include also these options to port forward ssh to port 2222:
+```bash
+-net nic -net user,hostfwd=tcp::2222-:22
+```
 
 ## Note
 In steps 4 & 6 enable kvm through adding the below option when qemu is installed on an arm processor not x86 in our case:
