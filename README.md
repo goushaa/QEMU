@@ -5,8 +5,7 @@ To install QEMU on Ubuntu, run the following command:
 
 ```bash
 sudo apt update
-sudo apt install qemu qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
-sudo apt install qemu-efi-aarch64
+sudo apt install qemu-system-arm qemu-efi-aarch64 qemu-utils
 ```
 
 ## 2. Create a Disk Image
