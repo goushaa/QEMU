@@ -86,6 +86,19 @@ Now, we can ssh from our host to the VM using this command:
 ```bash
 ssh user@localhost -p 2222
 ```
+To enhance your development experience using VSCode with SSH, follow these steps:
+
+1. **Open Visual Studio Code**.
+2. **Install the Remote - SSH Extension**:
+   - Navigate to the **Extensions** view by clicking on the Extensions icon in the Activity Bar or by pressing `Ctrl+Shift+X`.
+   - Search for **Remote - SSH** and click **Install**.
+
+3. **Connect to Your Host**:
+   - Press `F1` to open the Command Palette.
+   - Type `Remote-SSH: Connect to Host...` and select it.
+   - Add your host using the SSH command you configured previously.
+
+Now you can easily SSH into your remote host and develop directly in VSCode!
 
 ## Note
 In steps 4 & 6 enable kvm through adding the below option when qemu is installed on an arm processor not x86 in our case:
