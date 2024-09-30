@@ -59,16 +59,16 @@ The VM will now start. Follow these instructions:
 
 ```bash
 qemu-system-aarch64 \
-   -machine virt \
-   -cpu cortex-a57 \
-   -m 2048 \
-   -smp 2 \
-   -nographic \
-   -bios /usr/share/qemu-efi-aarch64/QEMU_EFI.fd \
-   -drive if=none,file=ubuntu-arm64.qcow2,id=hd0 \
-   -device virtio-blk-device,drive=hd0 \
-   -netdev user,id=net0 \
-   -device virtio-net-device,netdev=net0
+    -machine virt \
+    -cpu cortex-a57 \
+    -m 2048 \
+    -smp 2 \
+    -nographic \
+    -bios /usr/share/qemu-efi-aarch64/QEMU_EFI.fd \
+    -drive if=none,file=ubuntu-arm64.qcow2,id=hd0 \
+    -device virtio-blk-device,drive=hd0 \
+    -netdev user,id=net0,hostfwd=tcp::2222-:22 \
+    -device virtio-net-device,netdev=net0
 ```
 When prompted, enter the username and password that you set up during the installation process.
 
@@ -80,9 +80,8 @@ sudo systemctl enable ssh --now
 ```
 On VM boot include also these options to port forward ssh to port 2222:
 ```bash
--net nic -net user,hostfwd=tcp::2222-:22
+-netdev user,id=net0,hostfwd=tcp::2222-:22
 ```
-I think we need to change the options of: /etc/ssh/sshd_config
 
 ## Note
 In steps 4 & 6 enable kvm through adding the below option when qemu is installed on an arm processor not x86 in our case:
