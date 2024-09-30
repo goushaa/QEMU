@@ -82,6 +82,10 @@ On VM boot include also these options to port forward ssh to port 2222:
 ```bash
 -netdev user,id=net0,hostfwd=tcp::2222-:22
 ```
+Now, we can ssh from our host to the VM using this command:
+```bash
+ssh user@localhost -p 2222
+```
 
 ## Note
 In steps 4 & 6 enable kvm through adding the below option when qemu is installed on an arm processor not x86 in our case:
